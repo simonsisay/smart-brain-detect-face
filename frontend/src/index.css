@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "courier new";
+  background:linear-gradient(to right, rgb(72, 177, 240), rgb(232, 1, 196));
+  min-height: 100vh;
+}
+
+
+.form input, .form button{
+	border:none;
+}
+
+.form button{
+	background:#ff0059
+}
+
+.Tilt-inner{
+	padding-top:10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Tilt-inner small{
+	padding-top:8px;
+	color:white;
+}
+
+
+.brain-logo{
+	width:70px;
+	height: 70px;
+}
+
+.image-detect{
+	margin-bottom:30px;
+}
+
+.image-detect img{
+	width: 500px
+}
+
+.signin-form{
+	margin:0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+	max-width:500px;
+	margin:auto;
+}
+
+.signin-form label{
+	font-weight: bold;
+	margin-right:20px;
+}
+
+.form-container{
+	padding:20px;
+}
+
+.signin-form div{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	margin:20px;
+}
+
+.signin-form h1{
+	text-decoration: underline;
+}
+
+.signin-form input{
+	padding:10px;
+	padding-left: 13px;
+	background:transparent;
+	border:1px solid black;
+}
+
+
+
+.signin-form button{
+	padding:10px;
+	background:transparent;
+	border:1px solid black;
+	font-weight: 500;
+	border-radius: 3px;
+}
+
+.reg-link{
+	color:black;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+
+.bounding-box{
+	position: absolute;
+	box-shadow: 0 0 0 3px #149df2 inset;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	cursor: pointer;
+}
