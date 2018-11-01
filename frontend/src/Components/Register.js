@@ -9,7 +9,8 @@ class Register extends Component{
 		this.state = {
 			name:'',
 			email:'',
-			password:''
+			password:'',
+			error:''
 		}
 	}
 
@@ -37,7 +38,7 @@ class Register extends Component{
 			}
 		})
 		.catch(error => {
-			console.log(error)
+			this.setState({error: 'Unable to registre. Please try again'})
 		})
 	}
 
@@ -46,6 +47,7 @@ class Register extends Component{
 			<div>
 				<Navigation navLink={'Sign in'} />
 					<div className="form-container">
+						<p>{this.state.error ? this.state.error : ''}</p>
 						<div className="signin-form shadow-2">
 							<h1>Register</h1>
 							<form>
