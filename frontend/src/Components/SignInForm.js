@@ -34,7 +34,7 @@ class SignInForm extends Component{
 				this.props.history.push('/')
 		})
 		.catch(error => {
-			console.log(error)
+			this.setState({error:'Wrong username or password'})
 		})
 	}
 
@@ -47,6 +47,7 @@ class SignInForm extends Component{
 				<div className="form-container">
 					<div className="signin-form shadow-2">
 						<h1>Sign in</h1>
+						<p style={{color:'red'}}>{this.state.error ? this.state.error : ''}</p>
 						<form>
 						   <div>
 								<label>Email</label>

@@ -43,7 +43,6 @@ body {
 }
 
 .signin-form{
-	margin:0 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -51,6 +50,7 @@ body {
 	border-radius: 5px;
 	max-width:500px;
 	margin:auto;
+	padding-top: 0px;
 }
 
 .signin-form label{
@@ -67,7 +67,7 @@ body {
 	flex-direction: column;
 	justify-content:center;
 	align-items:center;
-	margin:20px;
+	margin-bottom:20px;
 }
 
 .signin-form h1{
@@ -77,8 +77,11 @@ body {
 .signin-form input{
 	padding:10px;
 	padding-left: 13px;
-	background:transparent;
+	background:black;
 	border:1px solid black;
+	opacity:.6;
+	color:white;
+	font-weight: bold;
 }
 
 
@@ -89,6 +92,7 @@ body {
 	border:1px solid black;
 	font-weight: 500;
 	border-radius: 3px;
+	font-weight: bold;
 }
 
 .reg-link{
@@ -105,4 +109,9 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	cursor: pointer;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:black !important;
+    -webkit-background-color:black !important;
 }

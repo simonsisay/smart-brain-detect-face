@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Rank = (props) => {
-	console.log(props)
 	return(
 		<div>
 			<div className="white f3">

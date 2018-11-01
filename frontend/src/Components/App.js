@@ -22,8 +22,12 @@ class App extends Component {
       imageUrl:'',
       detecting:'',
       box:{},
-      entries:this.props.user.entries
+      entries:0
     }
+  }
+
+  componentDidMount(){
+    this.setState({entries:Number(this.props.user.entries)})
   }
 
   handleChange = (event) => {
@@ -31,11 +35,12 @@ class App extends Component {
   }
 
   handleSubmit = () => {
-    this.setState({detecting:'Detecting faces...'})
+    this.setState({detecting:this.state.imageUrl ? 'Detecting faces...' : 'Please add image url to submit'})
     
     app.models.predict(Clarifai.FACE_DETECT_MODEL, `${this.state.imageUrl}`)
     
     .then(response => {
+      console.log(response)
       this.displayFaceBox(this.calculateFaceLocation(response))
       this.setState({detecting:''})
     })
@@ -76,7 +81,6 @@ class App extends Component {
  }
 
   render() {
-    console.log(this.props)
     return(
         <div className='App'>
           <Navigation navLink={'Sign out'}/>
