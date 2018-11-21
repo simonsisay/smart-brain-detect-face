@@ -29,6 +29,8 @@ app.get('/', (req, res) => {
 	})
 })
 
+
+
 app.get('/profile/:id', (req, res) => {
 	const { id } = req.params;
 	database.select('*').from('users')
@@ -40,6 +42,7 @@ app.get('/profile/:id', (req, res) => {
 		res.status(404).json('No such user')
 	})
 })
+
 
 
 app.post('/register', (req, res) => {

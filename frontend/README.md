@@ -24,11 +24,11 @@ to start the server .
   "react-tilt": "^0.1.4",
   "tachyons": "^4.10.0"
 
-/Backend:
+/Backend  :
 
   "body-parser": "^1.18.3",
   "express": "^4.16.4",
   "nodemon": "^1.18.5",
-   bcrypt-nodejs": "0.0.3",
-   "knex": "^0.15.2",
+  "bcrypt-nodejs": "0.0.3",
+  "knex": "^0.15.2",
   "pg": "^7.6.0"
